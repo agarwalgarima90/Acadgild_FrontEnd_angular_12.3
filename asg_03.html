@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="acadgild">
+	<head>
+		<title>Assignment 12.3</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script>
+			var myapp = angular.module('acadgild', []);
+
+			myapp.controller('mycontroller1', function($scope) {
+				$scope.session = ["Start","Halt","Stop","Cancelled"];
+			});
+
+		</script>
+	</head>
+	<body>
+		<div ng-controller="mycontroller1">
+			<ul>
+				<li ng-repeat="s in session | orderBy">{{s}}</li>
+			</ul>
+		</div>
+	</body>
+</html>
